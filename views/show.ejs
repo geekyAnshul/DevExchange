@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brief</title>
+</head>
+<body>
+    <h1>Post of <%= post.username %></h1>
+    <h3><%= post.content %></h3>
+    <p><%= post.description%></p>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Brief</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        body {
+            background-color: #121212; /* Dark background */
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Styling the container to center the content */
+        .post-container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 600px;
+            transition: all 0.5s ease;
+        }
+        .post-container:hover{
+            border-color:  #28a745;
+            box-shadow: 0 0 10px 5px rgba(40, 167, 69, 0.7);    
+        }
+        /* Username styling */
+        h1 {
+            font-size: 45px;
+            font-weight: 700;
+            color: #28a745; /* Green color for username */
+            margin-bottom: 15px;
+            border-bottom: 2px solid #28a745;
+            padding-bottom: 10px;
+            text-align: center;
+            
+        }
+        h1:hover{
+            text-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+            cursor: pointer;
+        }
+       
+        /* Content styling */
+        h3 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #ccc; /* Lighter gray color */
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        /* Description styling */
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #fff;
+            padding: 15px;
+            background-color: #222;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        /* Glowing green light effect on hover */
+        p:hover {
+            border-color: #3a3b3a;
+                
+        }
+    </style>
+</head>
+<body>
+
+    <div class="post-container">
+        <h1>Notes of <%= post.username %></h1>
+        <h3><%= post.content %></h3>
+        <p><%= post.description %></p>
+    </div>
+
+</body>
+</html>

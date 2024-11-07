@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"     rel="stylesheet">
+    <title>Create New Post</title>
+    <style>
+        /* Body styling with dark theme */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #fff; /* White text */
+            font-family: "Montserrat", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Form styling */
+        form {
+            background-color: #1a1a1a; /* Darker form background */
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for form */
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        /* Input and textarea styling */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid #333; /* Dark border */
+            background-color: #222; /* Dark input background */
+            color: #fff; /* White text */
+            outline: none;
+            font-size: 16px;
+            transition: border 0.3s ease;
+        }
+
+        /* Hover effect for inputs and textarea */
+        input[type="text"]:focus,
+        textarea:focus {
+            border: 2px solid #28a745; /* Green border on focus */
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745; /* Green background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow effect */
+        }
+
+        /* Hover effect for button */
+        button:hover {
+            box-shadow: 0 0 15px 5px rgba(40, 167, 69, 0.7); /* Glowing green light */
+            transform: scale(1.05); /* Slightly enlarges button */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>New Posts</h1>
+    <form action="">
+        <input placeholder="Enter your Username" type="text" name="username" required/>
+        <textarea name="content" placeholder="Enter Your Post" rows="5" required></textarea>
+        <button type="submit">Submit Post</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Create New Post</title>
+    <style>
+        /* Body styling with dark theme */
+        body {
+            background-color: #121212; /* Dark background */
+            color: #fff; /* White text */
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0 20px; /* Extra padding for mobile devices */
+        }
+
+        /* Form container */
+        form {
+            background-color: #1a1a1a; /* Dark form background */
+            padding: 50px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Softer shadow */
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+        form:hover{
+            border-color: #28a745;
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+        }
+
+        /* Heading styling */
+        h1 {
+            color: #28a745; /* Green heading */
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+            
+        }
+        h1:hover{
+            text-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+            cursor: pointer;
+        }
+
+        /* Input and textarea styling */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #333; /* Dark border */
+            background-color: #222; /* Dark input background */
+            color: #fff; /* White text */
+            outline: none;
+            font-size: 16px;
+            transition: border 0.3s ease;
+            text-transform: capitalize;
+        }
+
+        /* Input hover and focus effects */
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #28a745; /* Green border on focus */
+           
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745; /* Green background */
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Softer shadow */
+        }
+
+        /* Button hover effect */
+        button:hover {
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.6); /* Soft glowing green light */
+            transform: translateY(-2px); /* Slight upward movement */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 768px) {
+            form {
+                width: 100%; /* Adjust to full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Create New Note</h1>
+    <form method="post" action="/posts">
+        <input placeholder="Enter Topic Name" type="text" name="username" required/>
+        <textarea name="content" placeholder="Write Your Note" rows="5" required></textarea>
+        <button type="submit">Create Note</button>
+    </form>
+</body>
+</html>

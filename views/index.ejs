@@ -1,0 +1,296 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"     rel="stylesheet">
+    <title>All Posts</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .nav{
+            width: 100vw;
+            height: 10vh;
+            padding: 5px 20px;
+            display: flex;
+            background-color:black; 
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 10px 2px 5px rgb(21, 214, 21);
+        }
+        .nav h1{
+            font-size: 30px;
+            font-weight: 700;
+           
+        }
+        .nav .create,a{
+            text-decoration: none;
+            background-color: rgb(20, 207, 20);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav .create:hover{
+            box-shadow: 0 0 20px 10px rgba(40, 167, 69, 0.7);
+        }
+        
+            /* Card container to hold all cards */
+            .card-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 40px;
+              padding: 60px;  
+            }
+          
+            /* Each card styling */
+            .card {
+              background-color: #1a1a1a; /* Dark background */
+              border-radius: 10px;
+              padding: 20px;
+              width: 300px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Shadow effect */
+              transition: all 0.3s ease;
+              border: 2px solid transparent;
+              color: #fff; /* White text for better contrast */
+              margin-top: 20px;
+            }
+          
+            /* Text styling */
+            .card h1 {
+              font-size: 22px;
+              margin-bottom: 10px;
+              color: #28a745; /* Green color for username */
+            }
+          
+            .card h3 {
+              font-size: 18px;
+              margin-bottom: 10px;
+              color: #ccc; /* Lighter text for content */
+            }
+          
+            /* Hover effect for glowing green light */
+            .card:hover {
+              box-shadow: 0 0 15px 5px rgba(40, 167, 69, 0.7); /* Glowing green light */
+              transform: scale(1.05); /* Slightly enlarges the card */
+              border: 2px solid #28a745; /* Green border on hover */
+            }
+          
+            /* Optional: Card container responsiveness */
+            @media (max-width: 768px) {
+              .card {
+                width: 100%;
+              }
+            }
+         
+          
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+       <h1> DevExchange  </h1>
+      <div class="create"><a href="">Create New Post</a></div>
+    </div>
+    <!-- <div class="card">
+   <% for(post of posts){  %>
+       <h1> <%= post.username %>   </h1>
+       <h3> <%= post.content %>   </h3>
+  <%  }  %>
+</div> -->
+
+<!-- <div class="card-container">
+    <% for(post of posts) { %>
+      <div class="card">
+        <h1> <%= post.username %> </h1>
+        <h3> <%= post.content %> </h3>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html> -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+     
+     <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+     />
+     <title>All Posts</title>
+     <style>
+         * {
+             padding: 0;
+             margin: 0;
+             box-sizing: border-box;
+             color: white;
+             font-family: "Montserrat", sans-serif;
+         }
+ 
+         body {
+             background-color: black;
+         }
+ 
+         /* Navigation Bar */
+         .nav {
+             width: 100vw;
+             height: 10vh;
+             padding: 5px 20px;
+             display: flex;
+             background-color: black;
+             align-items: center;
+             justify-content: space-between;
+             box-shadow: 10px 2px 5px rgb(21, 214, 21);
+         }
+ 
+         .nav h1 {
+             font-size: 30px;
+             font-weight: 700;
+         }
+ 
+         .nav .create{
+             text-decoration: none;
+             background-color: rgb(20, 207, 20);
+             padding: 5px 10px;
+             border-radius: 5px;
+             font-weight: 600;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+         }
+ 
+         .nav .create:hover {
+             box-shadow: 0 0 20px 10px rgba(40, 167, 69, 0.7);
+         }
+ 
+         /* Card container to hold all cards */
+         .card-container {
+             display: flex;
+             flex-wrap: wrap;
+             gap: 40px;
+             padding: 60px;
+         }
+ 
+         /* Each card styling */
+         .card {
+             background-color: #1a1a1a;
+             border-radius: 10px;
+             padding: 20px;
+             width: 320px;
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+             transition: all 0.3s ease;
+             border: 2px solid transparent;
+             color: #fff;
+             margin-top: 20px;
+         }
+ 
+         /* Text styling */
+         .card h1 {
+             font-size: 22px;
+             margin-bottom: 10px;
+             color: #28a745; /* Green color for username */
+         }
+ 
+         .card h3 {
+             font-size: 18px;
+             margin-bottom: 25px;
+             color: #ccc;
+         }
+ 
+         /* Hover effect for glowing green light */
+         .card:hover {
+             box-shadow: 0 0 15px 5px rgba(40, 167, 69, 0.7);
+             transform: scale(1.05);
+             border: 2px solid #28a745;
+         }
+ 
+         /* Button-like anchor tags inside card */
+         .card .card-actions a {
+            text-decoration: none; 
+              /* Green background */
+             padding: 2px 10px;
+             border-radius: 5px;
+             font-weight: 500;
+             transition: all 0.3s ease;
+             margin-right: 10px;
+         }
+         .card .card-actions a:hover{
+            font-weight: 600;
+            text-decoration: underline;
+         }
+    
+         .edit {
+            color: rgb(227, 209, 8);
+         }
+         .add{
+            color: dodgerblue;
+         }
+         .create a{
+            text-decoration: none;
+         }
+         form{
+            display: inline;
+         }
+         .delete{
+            color: rgb(237, 10, 55);
+            font-size: 20px;
+            cursor: pointer;
+
+         }
+          #delete{
+            background-color: #1a1a1a;
+            border: none;
+            margin-left: 10px;
+          }
+ 
+         /* Optional: Card container responsiveness */
+         @media (max-width: 768px) {
+             .card {
+                 width: 100%;
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <!-- Navigation Bar -->
+     <div class="nav">
+         <h1>DevNote Compass</h1>
+         <div class="create">
+            <a href="http://localhost:8080/posts/new">Create Note</a>
+         </div>
+     </div>
+ 
+     <!-- Card Container -->
+     <div class="card-container">
+         <% for(post of posts) { %>
+         <div class="card">
+             <h1><%= post.username %></h1>
+             <h3><%= post.content %></h3>
+             <div class="card-actions">
+                <a class="add" href="http://localhost:8080/posts/<%=post.id%>">See More</a>
+                 <a class="edit" href="http://localhost:8080/posts/<%=post.id%>/edit">Edit</a> <!-- Edit anchor -->
+                  <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+                 <button id="delete"><i class="ri-delete-bin-6-fill delete"></i></button>
+                 <!-- Add More anchor -->
+                </form>
+             </div>
+         </div>
+         <% } %>
+     </div>
+ </body>
+ </html>
+ 

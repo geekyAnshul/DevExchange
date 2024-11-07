@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Edit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        body {
+            background-color: #121212; /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form container styling */
+        .edit-container {
+            background-color: #1a1a1a; /* Darker form background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid transparent;
+        }
+        
+        .edit-container:hover{
+            border: 2px solid #28a745; /* Green border on focus */
+            box-shadow: 0 0 10px 5px rgba(40, 167, 69, 0.7); 
+        }
+        /* Heading styling */
+        h1 {
+            text-align: center;
+            color: #28a745; /* Green heading */
+            margin-bottom: 20px;
+        }
+        
+        h1:hover{
+            text-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+            cursor: pointer;
+        }
+
+
+        /* Textarea styling for editable content */
+        textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #222;
+            color: #fff;
+            border: 2px solid #333; /* Dark border */
+            font-size: 16px;
+            height: 150px; /* Adjust height for editing */
+            margin-bottom: 15px;
+            outline: none;
+            resize: vertical; /* Allow vertical resizing */
+            transition: border 0.3s ease;
+            text-transform: capitalize;
+        }
+
+        /* Textarea focus effect */
+        textarea:focus {
+            border: 2px solid #28a745; /* Green border on focus */ /* Green glowing effect */
+        }
+        textarea:hover {
+            border: 2px solid #28a745; /* Green border on focus */ /* Green glowing effect */
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745; /* Green background */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+        }
+
+        /* Button hover effect */
+        button:hover {
+            
+            border-color:  #28a745;
+             box-shadow: 0 0 3px 3px rgba(40, 167, 69, 0.7);
+             /* Slight enlarge */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="edit-container">
+        <h1>Edit the post of <%= post.username %></h1>
+        <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+            <!-- Disabled input for old content -->
+            
+            <!-- Textarea for editing post -->
+            <!-- <textarea  name="content" id="content"><%= post.content %></textarea> -->
+            <textarea name="content" id="content"><%= post.content %></textarea>
+
+            <!-- Submit button -->
+            <button>Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
